@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact | Paws Rescue</title><link rel="stylesheet" href="css/style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Roodepoort Paws Rescue | Visit Us in Roodepoort Gauteng</title>
+<meta name="description" content="Contact Roodepoort Paws Rescue in Constantia, Roodepoort. Email info@roodepoortpawsrescue.co.za. View map and opening hours.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
 <body>
-<header><nav class="navbar"><div class="logo">🐾 Paws Rescue</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Adoption</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a href="contact.html" class="active">Contact</a></li></ul></nav></header>
+<header><nav class="navbar"><div class="logo">Roodepoort Paws Rescue</div>
+<a href="index.html">Home</a><a href="about.html">About</a><a href="adoption.html">Adoption</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a></nav></header>
 <main class="container">
-<h1>Contact Us</h1>
-<p><strong>Address:</strong> 200 Pretorius Street, Pretoria CBD, 0001</p>
-<p><strong>Phone:</strong> 012 345 6789</p>
-<p><strong>Email:</strong> info@pawsrescue.org.za</p>
-<iframe src="https://maps.google.com/maps?q=Pretoria%20CBD&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" title="Pretoria CBD Map"></iframe>
+<h1>Contact Us - Roodepoort Paws Rescue</h1>
+<div id="map" style="height:350px; width:100%; border:2px solid #ccc; margin-bottom:20px;"></div>
+<form id="contactForm" method="POST">
+<label>Name* <input type="text" id="contactName" required></label><br><br>
+<label>Email* <input type="email" id="contactEmail" required></label><br><br>
+<label>Type* <select id="messageType" required><option>General</option><option>Adoption</option><option>Donation</option><option>Volunteer</option></select></label><br><br>
+<label>Message* <textarea id="contactMessage" rows="4" required></textarea></label><br><br>
+<button type="submit" class="btn">Send Message</button>
+<div id="contactError" style="color:red;"></div>
+<div id="contactResponse" style="background:#e3f2fd; padding:15px; margin-top:15px;"></div>
+</form>
 </main>
 <footer><p>&copy; 2026 Paws Rescue</p></footer>
 <script src="js/script.js"></script>
