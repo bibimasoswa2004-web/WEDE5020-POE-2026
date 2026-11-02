@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bibimasoswa2004-web.github.io/WEDE5020-POE-2026/sitemap.xml
