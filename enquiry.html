@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Enquiry | Paws Rescue</title><link rel="stylesheet" href="css/style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roodepoort Paws Rescue | Adoption Enquiry - Adopt Dogs & Cats</title>
+<meta name="description" content="Enquire about adopting dogs and cats at Roodepoort Paws Rescue. Adoption fee R500 includes vaccination. Check availability now.">
+<meta name="keywords" content="dog adoption enquiry Roodepoort, cat adoption form Gauteng">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
 <body>
-<header><nav class="navbar"><div class="logo">🐾 Paws Rescue</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Adoption</a></li><li><a href="enquiry.html" class="active">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
+<header>
+<nav class="navbar">
+<div class="logo">Roodepoort Paws Rescue</div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="adoption.html">Adoption</a>
+<a href="enquiry.html">Enquiry</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
 <main class="container">
-<h1>Adoption Enquiry</h1>
-<form id="enquiryForm">
-<label>Name* <input type="text" id="name" required></label>
-<label>Email* <input type="email" id="email" required></label>
-<label>Pet interested in<select id="pet"><option>Bella - Labrador</option><option>Milo - Cat</option><option>Max - Shepherd</option></select></label>
-<label>Message<textarea id="message" rows="4" required></textarea></label>
+<h1>Adoption Enquiry - Roodepoort Paws Rescue</h1>
+<p>Want to adopt Bella, Milo or Rocky? Fill this form. Cost: R500 adoption fee includes vaccine & sterilization.</p>
+
+<form id="enquiryForm" action="https://formspree.io/f/xdovqkvd" method="POST">
+<label>Full Name* <input type="text" id="enqName" name="name" required minlength="3" placeholder="Bibi Masoswa"></label><br><br>
+<label>Email* <input type="email" id="enqEmail" name="email" required placeholder="bibi@gmail.com"></label><br><br>
+<label>Phone* (10 digits) <input type="tel" id="enqPhone" name="phone" required pattern="[0-9]{10}" placeholder="0601234567"></label><br><br>
+<label>Service* 
+<select id="enqService" name="service" required>
+<option value="Adopt">Adopt a Pet</option>
+<option value="Foster">Foster a Pet</option>
+<option value="Volunteer">Volunteer</option>
+<option value="Sponsor">Sponsor/Donate</option>
+</select>
+</label><br><br>
+<label>Pet interested in
+<select id="pet" name="pet">
+<option>Bella - Dog - 2 years</option>
+<option>Milo - Cat - 1 year</option>
+<option>Rocky - Dog - 3 years</option>
+<option>Any available</option>
+</select>
+</label><br><br>
+<label>Message* <textarea id="enqMessage" name="message" rows="4" required minlength="10" placeholder="I want to adopt..."></textarea></label><br><br>
 <button type="submit" class="btn">Submit Enquiry</button>
+<div id="enqError" style="color:red; margin-top:10px;"></div>
+<div id="enqResponse" style="display:none; background:#e8f5e9; padding:15px; margin-top:15px; border:1px solid green;"></div>
 </form>
 </main>
-<footer><p>&copy; 2026 Paws Rescue</p></footer>
+
+<footer><p>&copy; 2026 Paws Rescue - Roodepoort, Gauteng | <a href="sitemap.xml">Sitemap</a> | <a href="robots.txt">Robots</a></p></footer>
 <script src="js/script.js"></script>
 </body>
 </html>
