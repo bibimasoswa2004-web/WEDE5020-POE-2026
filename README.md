@@ -1,11 +1,11 @@
 # WEDE5020 POE 2026 - Part 2
 
 ## Project Title
-[Your Business Name] Website - Responsive Web Development
+[Roodepoort paws Rescue ] Website - Responsive Web Development
 
 ## Student Information
 - Name: Bibi Masoswa
-- Student Number: [Add yours]
+- Student Number: [ST10532945]
 - Module: WEDE5020
 - Part: 2 - CSS Styling & Responsive Design
 
